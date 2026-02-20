@@ -1,0 +1,143 @@
+/**
+ * KodNest Premium Build System — Components
+ * Buttons, inputs, cards. Same hover, same radius everywhere.
+ */
+
+/* ─── BUTTONS ───────────────────────────────────────────────────────────────── */
+.kn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kn-space-1);
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  font-weight: 500;
+  line-height: 1;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid transparent;
+  cursor: pointer;
+  transition: var(--kn-transition);
+}
+
+.kn-btn-primary {
+  background-color: var(--kn-accent);
+  color: var(--kn-bg);
+  border-color: var(--kn-accent);
+}
+
+.kn-btn-primary:hover {
+  background-color: #6a0000;
+  border-color: #6a0000;
+}
+
+.kn-btn-secondary {
+  background-color: transparent;
+  color: var(--kn-text);
+  border-color: var(--kn-border);
+}
+
+.kn-btn-secondary:hover {
+  border-color: var(--kn-text);
+  color: var(--kn-text);
+}
+
+.kn-btn:focus-visible {
+  outline: 2px solid var(--kn-border-focus);
+  outline-offset: 2px;
+}
+
+/* ─── INPUTS ───────────────────────────────────────────────────────────────── */
+.kn-input {
+  width: 100%;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-text);
+  background-color: var(--kn-bg);
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  transition: var(--kn-transition);
+}
+
+.kn-input::placeholder {
+  color: var(--kn-text-muted);
+}
+
+.kn-input:hover {
+  border-color: rgba(17, 17, 17, 0.25);
+}
+
+.kn-input:focus {
+  outline: none;
+  border-color: var(--kn-border-focus);
+}
+
+.kn-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── CARDS ───────────────────────────────────────────────────────────────── */
+.kn-card {
+  background-color: var(--kn-bg);
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  padding: var(--kn-space-3);
+  transition: var(--kn-transition);
+}
+
+.kn-card:hover {
+  border-color: rgba(17, 17, 17, 0.2);
+}
+
+/* No drop shadows. Subtle border only. */
+
+/* ─── PROMPT BOX (Copyable) ────────────────────────────────────────────────── */
+.kn-prompt-box {
+  position: relative;
+  padding: var(--kn-space-2);
+  font-family: "Monaco", "Consolas", monospace;
+  font-size: var(--kn-caption);
+  line-height: 1.5;
+  color: var(--kn-text);
+  background-color: rgba(17, 17, 17, 0.03);
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.kn-prompt-box .kn-prompt-copy {
+  position: absolute;
+  top: var(--kn-space-1);
+  right: var(--kn-space-1);
+}
+
+/* ─── BADGE ───────────────────────────────────────────────────────────────── */
+.kn-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-caption);
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid var(--kn-border);
+  background-color: var(--kn-bg);
+}
+
+.kn-badge-success {
+  border-color: var(--kn-success);
+  color: var(--kn-success);
+}
+
+.kn-badge-warning {
+  border-color: var(--kn-warning);
+  color: var(--kn-warning);
+}
+
+.kn-badge-neutral {
+  color: var(--kn-text-muted);
+}

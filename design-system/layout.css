@@ -1,0 +1,193 @@
+/**
+ * KodNest Premium Build System — Global Layout Structure
+ * [Top Bar] → [Context Header] → [Primary Workspace + Secondary Panel] → [Proof Footer]
+ */
+
+/* ─── PAGE SHELL ───────────────────────────────────────────────────────────── */
+.kn-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--kn-bg);
+}
+
+/* ─── TOP BAR ───────────────────────────────────────────────────────────────── */
+.kn-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--kn-topbar-height);
+  padding: 0 var(--kn-space-4);
+  border-bottom: var(--kn-border-width) solid var(--kn-border);
+  background-color: var(--kn-bg);
+  flex-shrink: 0;
+}
+
+.kn-topbar-left {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  font-weight: 500;
+  color: var(--kn-text);
+}
+
+.kn-topbar-center {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-caption);
+  color: var(--kn-text-muted);
+}
+
+.kn-topbar-right {
+  /* Status badge lives here */
+}
+
+/* ─── CONTEXT HEADER ───────────────────────────────────────────────────────── */
+.kn-context-header {
+  padding: var(--kn-space-4) var(--kn-space-4) var(--kn-space-3);
+  flex-shrink: 0;
+}
+
+.kn-context-header h1 {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-heading-xl);
+  font-weight: 500;
+  line-height: var(--kn-line-height-tight);
+  margin: 0 0 var(--kn-space-1);
+  letter-spacing: -0.02em;
+}
+
+.kn-context-header .kn-context-subtext {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-lg);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-text-muted);
+  margin: 0;
+  max-width: var(--kn-text-max-width);
+}
+
+/* ─── MAIN CONTENT AREA ────────────────────────────────────────────────────── */
+.kn-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ─── PRIMARY WORKSPACE (70%) ───────────────────────────────────────────────── */
+.kn-workspace {
+  flex: 0 0 var(--kn-workspace-ratio);
+  padding: var(--kn-space-3) var(--kn-space-4);
+  overflow-y: auto;
+}
+
+/* Clean cards, predictable components, no crowding */
+
+/* ─── SECONDARY PANEL (30%) ────────────────────────────────────────────────── */
+.kn-panel {
+  flex: 0 0 var(--kn-panel-ratio);
+  padding: var(--kn-space-3) var(--kn-space-4);
+  border-left: var(--kn-border-width) solid var(--kn-border);
+  background-color: rgba(17, 17, 17, 0.01);
+  overflow-y: auto;
+}
+
+.kn-panel-step {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-text);
+  margin-bottom: var(--kn-space-3);
+}
+
+.kn-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-1);
+  margin-top: var(--kn-space-2);
+}
+
+/* ─── PROOF FOOTER ─────────────────────────────────────────────────────────── */
+.kn-proof-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-4);
+  height: var(--kn-footer-height);
+  padding: 0 var(--kn-space-4);
+  border-top: var(--kn-border-width) solid var(--kn-border);
+  background-color: var(--kn-bg);
+  flex-shrink: 0;
+}
+
+.kn-proof-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-1);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-caption);
+  color: var(--kn-text);
+}
+
+.kn-proof-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--kn-accent);
+  cursor: pointer;
+}
+
+.kn-proof-item input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+/* ─── ERROR STATE ──────────────────────────────────────────────────────────── */
+.kn-error-state {
+  padding: var(--kn-space-3);
+  border: var(--kn-border-width) solid var(--kn-accent);
+  border-radius: var(--kn-radius);
+  background-color: rgba(139, 0, 0, 0.04);
+}
+
+.kn-error-state-title {
+  font-family: var(--kn-font-sans);
+  font-weight: 500;
+  color: var(--kn-accent);
+  margin: 0 0 var(--kn-space-1);
+}
+
+.kn-error-state-message {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-2);
+}
+
+.kn-error-state-fix {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-caption);
+  color: var(--kn-text-muted);
+  margin: 0;
+}
+
+/* ─── EMPTY STATE ──────────────────────────────────────────────────────────── */
+.kn-empty-state {
+  padding: var(--kn-space-5);
+  text-align: center;
+}
+
+.kn-empty-state-title {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-heading-md);
+  font-weight: 500;
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-1);
+}
+
+.kn-empty-state-message {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-text-muted);
+  margin: 0 0 var(--kn-space-3);
+}
+
+.kn-empty-state-action {
+  margin-top: var(--kn-space-2);
+}

@@ -1,0 +1,99 @@
+/**
+ * KodNest Premium Build System — Base Styles
+ * Typography, reset, and foundational styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+/* ─── RESET ───────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--kn-bg);
+  color: var(--kn-text);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+}
+
+/* ─── TYPOGRAPHY ───────────────────────────────────────────────────────────── */
+.kn-heading-xl,
+.kn-heading-lg,
+.kn-heading-md {
+  font-family: var(--kn-font-serif);
+  font-weight: 500;
+  line-height: var(--kn-line-height-tight);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.kn-heading-xl {
+  font-size: var(--kn-heading-xl);
+}
+
+.kn-heading-lg {
+  font-size: var(--kn-heading-lg);
+}
+
+.kn-heading-md {
+  font-size: var(--kn-heading-md);
+}
+
+.kn-body,
+.kn-body-lg {
+  font-family: var(--kn-font-sans);
+  font-weight: 400;
+  margin: 0;
+}
+
+.kn-body {
+  font-size: var(--kn-body);
+  line-height: var(--kn-line-height-body);
+}
+
+.kn-body-lg {
+  font-size: var(--kn-body-lg);
+  line-height: var(--kn-line-height-loose);
+}
+
+.kn-caption {
+  font-size: var(--kn-caption);
+  color: var(--kn-text-muted);
+  line-height: var(--kn-line-height-body);
+}
+
+/* Text blocks: max-width for readability */
+.kn-text-block {
+  max-width: var(--kn-text-max-width);
+}
+
+/* ─── SPACING UTILITIES ────────────────────────────────────────────────────── */
+.kn-mt-1 { margin-top: var(--kn-space-1); }
+.kn-mt-2 { margin-top: var(--kn-space-2); }
+.kn-mt-3 { margin-top: var(--kn-space-3); }
+.kn-mt-4 { margin-top: var(--kn-space-4); }
+.kn-mt-5 { margin-top: var(--kn-space-5); }
+
+.kn-mb-1 { margin-bottom: var(--kn-space-1); }
+.kn-mb-2 { margin-bottom: var(--kn-space-2); }
+.kn-mb-3 { margin-bottom: var(--kn-space-3); }
+.kn-mb-4 { margin-bottom: var(--kn-space-4); }
+.kn-mb-5 { margin-bottom: var(--kn-space-5); }
+
+.kn-p-1 { padding: var(--kn-space-1); }
+.kn-p-2 { padding: var(--kn-space-2); }
+.kn-p-3 { padding: var(--kn-space-3); }
+.kn-p-4 { padding: var(--kn-space-4); }
+.kn-p-5 { padding: var(--kn-space-5); }
