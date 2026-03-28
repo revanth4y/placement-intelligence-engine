@@ -322,7 +322,7 @@ Enables extraction of structured outputs:
 
 ## Author
 
-Revanth Yerraguntla
+Revanth Y
 
 ---
 
